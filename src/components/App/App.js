@@ -1,11 +1,25 @@
 import './App.css';
-
-function App() {
+  export default function App() {
   return (
     <div className="App">
-      <h1>Your JSX here</h1>
+      <h1>React Dev Skills </h1>
+      <ul>
+        <li>Skilllistitem</li>
+        <li>Skilllistitem</li>
+        <li>Skilllistitem</li>
+      </ul>
+      <hr></hr>
+      <form>
+      <label>SKill<input></input>
+      <label>Level<input type='number'></input> </label>
+      <button>Add Skill</button>
+      </label>
+      </form>
     </div>
   );
 }
 
-export default App;
+
+
+
+
