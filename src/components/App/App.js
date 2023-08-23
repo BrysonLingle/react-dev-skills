@@ -1,6 +1,6 @@
 import './App.css';
-import NewSkillForm from '../NewSkillForm';
-import SkillListItem from '../SkillListItem'
+import NewSkillForm from './NewSkillForm.js';
+import SkillListItem from './SkillListItem.js'
   
 const skills = [
   { name: "HTML", level: 5 },
@@ -14,7 +14,12 @@ function App() {
     <div className='App'>
       <header className="App-header">
         <h1>React Dev Skills</h1>
-      <SkillListItem skills={skills} listName={'Skills'} />
+        <ul>
+          {skills.map((skill, index) => (
+            <SkillListItem key={index} skill={skill} index={index} />
+          ))}
+        </ul>
+        <NewSkillForm/>
         
       </header>
     </div>
