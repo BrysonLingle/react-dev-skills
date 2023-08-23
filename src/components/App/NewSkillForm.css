@@ -1,35 +1,49 @@
-.NewSkillForm {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 1rem;
-    align-items: center;
-    font-size: 1rem;
-    font-weight: bold;
-    color: teal;
-    text-align: left;
-    border: 0.2rem solid coral;
-    border-radius: 0.3rem;
-    padding: 1rem;
-  }
-  
-  .NewSkillForm > input,
-  .NewSkillForm > select {
-    font-size: 1rem;
-    font-weight: bold;
-    color: teal;
-    padding: 0.2rem;
-    border: 0.2rem solid coral;
-    border-radius: 0.3rem;
-    outline: none;
-  }
-  
-  .NewSkillForm > button {
-    grid-column: span 2;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    padding: 0.2rem;
-    background-color: teal;
-    border: 0.2rem solid teal;
-    border-radius: 0.3rem;
-  }
+form {
+  border: 5px solid rgb(255, 111, 74);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 64px auto;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  color: rgb(0, 118, 117);
+  font-weight: bold;
+  padding: 5px;
+  font-size: 1.75rem;
+}
+
+button {
+  color: white;
+  font-size: 1.5rem;
+  background-color: rgb(0, 118, 117);
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+  border: none;
+  width: 400px;
+  font-weight: bold;
+  margin: 20px 0 15px 0;
+  height: 48px;
+}
+
+input {
+  height: 2rem;
+  width: 310px;
+}
+
+select {
+  height: 2.75rem;
+  width: 310px;
+}
+
+input, select {
+  border: 5px solid rgb(255,111,74);
+  border-radius: 10px;
+  margin: 15px;
+  color: rgb(0,118,117);
+  font-size: 1.5rem;
+  font-weight: bold;
+}

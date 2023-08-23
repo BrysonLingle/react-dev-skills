@@ -1,18 +1,6 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.padding-0 {
-  padding: 0;
-}
-
-.teal-text {
-  color: teal;
-}
 h1 {
-  color: teal;
+  color: rgb(0, 118, 117); 
+  font-size: 3rem;
+  margin: 50px 0 70px 0;
+  text-align: center;
 }
