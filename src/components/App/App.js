@@ -11,16 +11,23 @@ function App() {
     { name: "Python", level: 2 },
   ]);
 
+  const [showSkills, setShowSkills] = useState(true);
+  function addSkill (evt) {
+    evt.preventDefault()
+    console.log('i can hit the add skill function')
+    setSkills([...skills, evt])
+  }
   return (
     <div className='App'>
       <header className="App-header">
         <h1>React Dev Skills</h1>
+        <button onclick={() => setShowSkills(!showSkills)}>{showSkills ? 'HIDE' : 'SHOW' }</button>
         <ul>
           {skills.map((skill, index) => (
             <SkillListItem key={index} skill={skill} index={index} />
           ))}
         </ul>
-        <NewSkillForm />
+        <NewSkillForm addSkill={addSkill} />
       </header>
     </div>
   )
