@@ -15,15 +15,14 @@ function App() {
 
   function addSkill(newSkill) {
     setSkills([...skills, newSkill]);
+    console.log(skills)
   }  
 
   return (
     <div className='App'>
       <header className="App-header">
         <h1>React Dev Skills</h1>
-        <button onClick={() => setShowSkills(!showSkills)}>
-          {showSkills ? 'HIDE' : 'SHOW'}
-        </button>
+  
         <ul>
           {skills.map((skill, index) => (
             <SkillListItem key={index} skill={skill} index={index} />

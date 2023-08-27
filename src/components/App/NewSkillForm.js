@@ -1,21 +1,22 @@
 import './NewSkillForm.css';
 import { useState } from 'react';
 
-function NewSkillForm({ addSkill }) {
+export default function NewSkillForm({ addSkill }) {
   const [newSkill, setNewSkill] = useState({
-    skill: '',
+  name: '',
     level: '1'
   });
 
   function handleOnChange(evt) {
     const updatedSkill = { ...newSkill, [evt.target.name]: evt.target.value };
+    console.log(updatedSkill)
     setNewSkill(updatedSkill);
   }
   function handleNewForm(evt) {
     evt.preventDefault();
     addSkill(newSkill);
     setNewSkill({
-      skill: '',
+      name: '',
       level: '1'
     });
   }
@@ -28,7 +29,7 @@ function NewSkillForm({ addSkill }) {
         <input
           className='input'
           type='text'
-          name='skill'
+          name='name'
           value={newSkill.skill}
           onChange={handleOnChange}
         />
@@ -53,4 +54,4 @@ function NewSkillForm({ addSkill }) {
   );
 }
 
-export default NewSkillForm;
+
